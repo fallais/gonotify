@@ -2,8 +2,8 @@ package email
 
 import (
 	"fmt"
-	"gonotify/pkg/notifiers"
 
+	"github.com/fallais/gonotify/pkg/notifiers"
 	"github.com/sirupsen/logrus"
 	"gopkg.in/gomail.v2"
 )
@@ -29,8 +29,8 @@ type email struct {
 // Factory
 //------------------------------------------------------------------------------
 
-// NewProvider returns a new provider for SMTP.
-func NewProvider(settings map[string]interface{}) notifiers.Notifier {
+// NewNotifier returns a new notifier for SMTP.
+func NewNotifier(settings map[string]interface{}) notifiers.Notifier {
 	// Initial values
 	host := ""
 	port := 25

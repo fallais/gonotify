@@ -7,9 +7,8 @@ import (
 	"net/url"
 	"time"
 
-	"gonotify/pkg/notifiers"
-	"gonotify/pkg/notifiers/sms"
-
+	"github.com/fallais/gonotify/pkg/notifiers"
+	"github.com/fallais/gonotify/pkg/notifiers/sms"
 	"github.com/sirupsen/logrus"
 )
 

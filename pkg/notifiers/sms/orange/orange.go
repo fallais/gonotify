@@ -7,9 +7,8 @@ import (
 	"net/url"
 	"time"
 
-	"gonotify/pkg/notifiers"
-	"gonotify/pkg/notifiers/sms"
-
+	"github.com/fallais/gonotify/pkg/notifiers"
+	"github.com/fallais/gonotify/pkg/notifiers/sms"
 	"github.com/sirupsen/logrus"
 )
 
@@ -34,8 +33,8 @@ type orange struct {
 // Factory
 //------------------------------------------------------------------------------
 
-// NewProvider returns a new provider for Free.
-func NewProvider(settings map[string]interface{}) notifiers.Notifier {
+// NewNotifier returns a new notifier for Free.
+func NewNotifier(settings map[string]interface{}) notifiers.Notifier {
 	// Set HTTP transport
 	tr := &http.Transport{
 		TLSClientConfig: &tls.Config{
